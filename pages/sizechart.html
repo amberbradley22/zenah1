@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenah|Women's Swimwear And Clothing</title>
+  <link rel="stylesheet" href="../index.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</head>
+
+<body>
+  <div class="hambu"></div>
+  <div class="cart-bag"></div>
+  <div class="search-bar"></div>
+
+  <div class="body-content">
+    <div class="navigation"></div>
+
+
+    <div class="sizechart-content">
+      <img class="img3" src="../resources/sizeimage.jpg">
+      <img class="img2" src="../resources/sizechartimg.png">
+
+    </div>
+    <div class="foot-nav"></div>
+  </div>
+</body>
+<script> $(function () { $(".navigation").load("../components/navigation.html"); }); </script>
+<script> $(function () { $(".hambu").load("../components/hamburger.html"); }); </script>
+<script> $(function () { $(".foot-nav").load("../components/footer.html"); }); </script>
+<script> $(function () { $(".cart-bag").load("../components/cart.html"); }); </script>
+<script> $(function () { $(".search-bar").load("../components/search.html"); }); </script>
+
+</html>
+
+<style>
+  * {
+    margin: 0;
+  }
+
+  .sizechart-content {
+    height: 700px;
+    width: 100%;
+    position: relative;
+  }
+
+  .sizechart-content .img2 {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+
+  }
+
+  .sizechart-content .img3 {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    ;
+  }
+</style>

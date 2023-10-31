@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenah|Women's Swimwear And Clothing</title>
+  <link rel="stylesheet" href="../allproducts.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+
+
+</head>
+
+<body>
+  <div class="cart-bag"></div>
+  <div class="search-bar"></div>
+  <div class="hambu"></div>
+
+
+  <div class="body-content">
+    <div class="navigation"></div>
+    <div class="header">
+      <h1>SHOP ALL</h1>
+    </div>
+
+    <div class="container1">
+      <div class="column1">
+        <ul id="imagelist5">
+        </ul>
+      </div>
+    </div>
+    <div class="foot-nav">
+    </div>
+  </div>
+
+
+
+</body>
+<script>
+  const apii = "http://127.0.0.1:5500/data/pro.json";
+  const display5 = document.querySelector("#imagelist5");
+
+  const getdata = async () => {
+    const res = await fetch(apii);
+    const daata = await res.json();
+    return daata;
+
+  }
+  const displayproducts = async () => {
+    const produc = await getdata();
+    let datadisplay = produc.map((object) => {
+      const { id, image, title, price } = object;
+
+      return `
+            <li> <a style= "color:black; text-decoration:none;" href= "../items/item1.html?id=${id}"><img class="image" src="${image}"> <span style= "font-size:18px;">${title}</span> <br> ${price}</a></li>
+            `
+    }).join("");
+
+    display5.innerHTML = datadisplay;
+  }
+  displayproducts();
+
+</script>
+<script> $(function () { $(".navigation").load("../components/navigation.html"); }); </script>
+<script> $(function () { $(".hambu").load("../components/hamburger.html"); }); </script>
+<script> $(function () { $(".foot-nav").load("../components/footer.html"); }); </script>
+<script> $(function () { $(".cart-bag").load("../components/cart.html"); }); </script>
+<script> $(function () { $(".search-bar").load("../components/search.html"); }); </script>
+
+
+
+</html>

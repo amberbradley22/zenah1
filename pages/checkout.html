@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenah|Women's Swimwear And Clothing</title>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+</head>
+
+<body>
+  <div class="hambu"></div>
+  <div class="cart-bag"></div>
+  <div class="search-bar"></div>
+
+  <div class="body-content">
+    <div class="navigation"></div>
+    <div class="container2">
+      <div class="leftside">
+        <h2>Contact</h2>
+        <input type="text" id="email" name="email" placeholder="Email">
+        <h2>Delivery</h2>
+        <div class="select-container">
+          <select class="select-box">
+            <option>Select Country</option>
+            <option value="1">United States</option>
+            <option value="2">Canada</option>
+            <option value="3">Australia</option>
+            <option value="4">United Kingdom</option>
+          </select>
+        </div>
+        <div class="rrow">
+          <input type="text" id="fname" name="fname" placeholder="First Name">
+          <input type="text" id="lname" name="lname" placeholder="Last Name">
+        </div>
+        <input type="text" id="address" name="address" placeholder="Address">
+        <div class="rrow">
+          <input type="text" id="city" name="city" placeholder="City">
+          <input type="text" id="state" name="state" placeholder="State">
+          <input type="text" id="zip" name="zip" placeholder="ZIP code">
+        </div>
+        <input type="text" id="phone" name="phone" placeholder="Phone">
+        <h2>Shipping Method</h2>
+        <div class="radiocard">
+          <input type="radio" id="first-class" name="shipping" checked="checked">
+          <label for="first-class">3-5 Day First Class Shipping</label>
+          <input type="radio" id="express" name="shipping" checked="checked">
+          <label for="express">2 Day Express Shipping</label>
+          <input type="radio" id="next-day" name="shipping" checked="checked">
+          <label for="next-day">UPS Next Day Air Saver - When Placed By Noon Pacific</label>
+        </div>
+        <h2>Payment</h2>
+        <div class="payment">
+          <ul class="accordion">
+            <li>
+              <input type="radio" id="creditcard" name="accordion" checked="checked">
+              <label for="creditcard">Credit Card</label>
+              <div class="info">
+                <div class="creditcardinfo">
+                  <input type="text" id="cardnum" name="fname" placeholder="Card Number">
+                  <div class="roow">
+                    <input type="text" id="exp" name="lname" placeholder="Expiration Date">
+                    <input type="text" id="seccode" name="address" placeholder="Security Code">
+                  </div>
+                  <input type="text" id="fullname" name="city" placeholder="Full Name on Card">
+                </div>
+              </div>
+            </li>
+            <li>
+              <input type="radio" id="paypal" name="accordion">
+              <label for="paypal">Paypal</label>
+              <div class="info">
+                <p>
+                  After clicking "Pay with PayPal", you will be redirected to PayPal to complete your purchase securely.
+                </p>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+        <div class="paynow">
+          <button>Pay Now</button>
+        </div>
+      </div>
+
+      <div class="rightside">
+        <div class="check">
+          <ul class="checkoutitemsadded">
+            <li> <a style="color:black; text-decoration:none;" href="../items/item1.html?id=${id}"><img class="image"
+                  src="${image}"> <span class="title" style="font-size:18px;">${title}</span> <br> <span
+                  class="price">${price}</span> <br><span class="size">${size}</span></a></li>
+          </ul>
+        </div>
+        <div class="discountform">
+          <input type="text" id="discount" name="discount" placeholder="Discount Code">
+          <button type="submit">APPLY</button>
+        </div>
+        <div class="checkout-text">
+          <div class="left">
+            <p>Subtotal</p>
+            <p>Shipping</p>
+            <p>Total</p>
+          </div>
+          <div class="right">
+            <p>$101.55</p>
+            <p>Enter shipping address</p>
+            <p>USD $101.55</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+
+<script> $(function () { $(".navigation").load("../components/navigation.html"); }); </script>
+<script> $(function () { $(".hambu").load("../components/hamburger.html"); }); </script>
+<script> $(function () { $(".search-bar").load("../components/search.html"); }); </script>
+
+</html>
+
+<style>
+  body {
+    margin: 0;
+    background-color: white;
+    box-sizing: border-box;
+
+
+  }
+
+  .container2 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    margin-bottom: none;
+  
+
+  }
+
+  .container2 ::placeholder {
+    font-size: 12px;
+    padding-left: 0;
+  }
+
+  .container2 .leftside {
+    width: 60%;
+    height: 100vh;
+    margin: 0 20px;
+  }
+
+  .select-container {
+    width: 100%;
+    margin-bottom: 10px;
+    border: .3px solid rgb(111, 111, 111);
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .select-box:hover {
+    cursor: pointer;
+  }
+
+  .select-box {
+    border: none;
+    appearance: none;
+    padding-left: 10px;
+    font-size: 12px;
+    color: grey;
+    width: 100%;
+    padding: 10px 0;
+    padding-left: 5px;
+  }
+
+  .leftside .rrow {
+    display: flex;
+  }
+
+  .leftside input {
+    height: 30px;
+    margin: 5px 3px;
+    border-radius: 3px;
+    padding-left: 10px;
+  }
+
+  .radiocard input[type="radio"] {
+    display: none;
+  }
+
+  .radiocard label {
+    display: flex;
+    border: 1px solid black;
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    padding: 15px 0;
+    padding-left: 10px;
+
+  }
+
+  .radiocard label:hover {
+    cursor: pointer;
+  }
+
+  .radiocard label::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    border: 3px solid black;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .radiocard input[type="radio"]:checked+label:before {
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border: 3px solid white;
+  }
+
+  .radiocard input[type="radio"]:checked+label {
+    background-color: black;
+    color: white;
+
+  }
+
+
+  .paynow button {
+    width: 300px;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-left: 50%;
+    background-color: white;
+    border: 1px solid black;
+  }
+
+  .paynow button:hover {
+    cursor: pointer;
+  }
+
+  .container2 .rightside {
+    width: 40%;
+    height: 1000px;
+    background-color: rgb(246, 244, 244);
+    overflow-y: scroll;
+    
+  }
+
+  .checkoutitemsadded li {
+    list-style: none;
+    padding: 20px;
+    position: relative;
+  }
+
+  .checkoutitemsadded .title {
+    position: absolute;
+    top: 20px;
+    left: 75px;
+  }
+
+  .checkoutitemsadded .price {
+    position: absolute;
+    color: rgb(106, 125, 142);
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .checkoutitemsadded .size {
+    position: absolute;
+    font-size: 13px;
+    top: 40px;
+    left: 75px;
+  }
+
+  .checkoutitemsadded .image {
+    height: 115px;
+    width: 85px;
+    margin-left: -40px;
+  }
+
+  .checkoutitemsadded li:first-child:before {
+    content: "";
+    width: 100%;
+    height: .5px;
+    background-color: rgb(56, 53, 53);
+    position: absolute;
+    margin-top: -10px;
+    left: -30px;
+  }
+
+  .checkoutitemsadded li::after {
+    content: "";
+    width: 100%;
+    height: .5px;
+    background-color: rgb(56, 53, 53);
+    margin-top: 10px;
+    position: absolute;
+    left: -30px;
+  }
+
+  .discountform {
+    display: flex;
+  }
+
+  .discountform input {
+    height: 30px;
+    margin: 0 5px;
+    background-color: rgb(213, 209, 209);
+    padding-left: 10px;
+  }
+
+  .discountform button {
+    padding: 0 40px;
+  }
+
+  .checkout-text {
+    display: flex;
+  }
+
+  .checkout-text .left {
+    margin-left: 30px;
+    width: 50%;
+  }
+
+  .checkout-text .right {
+    text-align: right;
+    padding-right: 10px;
+  }
+
+  .accordion {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .accordion input[type="radio"] {
+    display: none;
+  }
+
+  .accordion li {
+    width: 100%;
+    display: block;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    margin-left: 0;
+
+  }
+
+  .accordion label {
+    display: flex;
+    border: 1px solid black;
+    padding: 15px 0;
+    padding-left: 10px;
+  }
+
+  .accordion label:hover {
+    cursor: pointer;
+  }
+
+  .accordion label::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    border: 3px solid black;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .accordion input[type="radio"]:checked+label:before {
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border: 3px solid white;
+  }
+
+  .accordion input[type="radio"]:checked+label {
+    background-color: black;
+    color: white;
+
+  }
+
+  .accordion .info {
+    overflow: hidden;
+    max-height: 0;
+    transition: maxheight 0.5s, padding 0.5s;
+  }
+
+  .accordion input[type="radio"]:checked+label+.info {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+  }
+
+  .info p {
+    text-align: center;
+  }
+
+  .info .creditcardinfo input {
+    width: 98%;
+    height: 30px;
+    margin: 5px 3px;
+    border-radius: 3px;
+    padding-left: 10px;
+    box-shadow: none;
+    border: .5px solid black;
+  }
+
+  .creditcardinfo .roow {
+    display: flex;
+  }
+</style>

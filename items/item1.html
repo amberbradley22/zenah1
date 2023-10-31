@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenah|Women's Swimwear And Clothing</title>
+  <link rel="stylesheet" href="item1.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="hambu"></div>
+  <div class="cart-bag"></div>
+  <div class="search-bar"></div>
+
+  <div class="body-content">
+    <div class="navigation"></div>
+
+    <div class="product-content">
+      <div class="left-side"></div>
+
+      <div class="right-side">
+        <div class="right-text">
+
+        </div>
+        <p>SIZE:</p>
+        <div class="radiocard">
+          <input type="radio" id="small" name="shipping">
+          <label for="small">Small</label>
+          <input type="radio" id="medium" name="shipping" >
+          <label for="medium">Medium</label>
+          <input type="radio" id="large" name="shipping">
+          <label for="large">Large</label>
+        </div>
+      <div class="stock">
+        <p> <img src="../resources/pin.png">THIS ITEM IS LOW IN STOCK, ORDER SOON</p>
+      </div>
+        <button class="addbutton">ADD TO BAG</button>
+        <div>
+          <ul class="accordion">
+            <li>
+              <input type="radio" id="details" name="accordion" checked="checked">
+              <label for="details">Product Details</label>
+              <div class="info">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis commodi quis dolorem, aperiam odit
+                  inventore rerum harum? Amet saepe dolores culpa, id, neque dolorem facere, in quis nesciunt cumque
+                  reprehenderit.
+                </p>
+              </div>
+            </li>
+            <li>
+              <input type="radio" id="fabric" name="accordion">
+              <label for="fabric">Fabric & Fit</label>
+              <div class="info">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis commodi quis dolorem, aperiam odit
+                  inventore rerum harum? Amet saepe dolores culpa, id, neque dolorem facere, in quis nesciunt cumque
+                  reprehenderit.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="recommendations">
+      <h2> YOU'LL LOVE THESE</h2>
+      <div class="container1">
+        <ul class="image-list">
+          <li><img class="image" src="../resources/product-beigedress.png"></li>
+          <li><img class="image" src="../resources/product-ballerina.png"></li>
+          <li><img class="image" src="../resources/product-blackset.png"></li>
+          <li><img class="image" src="../resources/product-bluedress.png"></li>
+          <li><img class="image" src="../resources/product-image5.png"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-nav"></div>
+  </div>
+</body>
+<script> $(function () { $(".navigation").load("../components/navigation.html"); }); </script>
+<script> $(function () { $(".hambu").load("../components/hamburger.html"); }); </script>
+<script> $(function () { $(".foot-nav").load("../components/footer.html"); }); </script>
+<script> $(function () { $(".cart-bag").load("../components/cart.html"); }); </script>
+<script> $(function () { $(".search-bar").load("../components/search.html"); }); </script>
+<script>
+  $.getJSON("http://127.0.0.1:5500/data/pro.json", function (json) {
+    const id = new URLSearchParams(window.location.search).get('id');
+    // Specify the index to retrieve
+    var index = id - 1;
+
+    // Get specific index data
+    var data = json[index];
+
+    const template =
+      `
+    <img src="${data.bigimage}"><img>
+    
+    `
+    const template1 =
+      `
+    <h1> ${data.title}</h1>
+      <h3>${data.price} USD</h3>
+    
+    `
+    // Get the name for example
+    document.querySelector(".left-side").innerHTML = template;
+    document.querySelector(".right-text").innerHTML = template1;
+    
+  });
+ 
+
+
+</script>
+
+
+</html>

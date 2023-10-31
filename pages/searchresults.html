@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenah|Women's Swimwear And Clothing</title>
+  <link rel="stylesheet" href="../contact.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</head>
+
+<body>
+  <div>
+
+    <div class="hambu"></div>
+    <div class="cart-bag"></div>
+    <div class="search-bar"></div>
+
+    <div class="body-content">
+      <div class="navigation"></div>
+
+
+      <div>
+        <h1>SEARCH RESULTS FOR:</h1>
+        <h2><span id="searchrestext"></span> </h2>
+      </div>
+      <div class="container1">
+        <div class="column1">
+          <ul id="searchresimg">
+          </ul>
+        </div>
+      </div>
+      <div class="foot-nav">
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+
+<script> document.querySelector("#searchrestext").innerHTML = localStorage.getItem("textvalue");</script>
+<!--for the text to appear on the next page -->
+<script> $(function () { $(".navigation").load("../components/navigation.html"); }); </script>
+<!--for the code from the components to appear in this page -->
+<script> $(function () { $(".hambu").load("../components/hamburger.html"); }); </script>
+<script> $(function () { $(".foot-nav").load("../components/footer.html"); }); </script>
+<script> $(function () { $(".cart-bag").load("../components/cart.html"); }); </script>
+<script> $(function () { $(".search-bar").load("../components/search.html"); }); </script>
+
+</html>
+
+
+
+
+
+<style>
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  .container1 {
+    width: 100%;
+    margin: 70px;
+    padding-right: 80px;
+    box-sizing: border-box;
+
+  }
+
+  .column1 ul li {
+    list-style: none;
+    height: 300px;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 15px;
+
+  }
+
+  .column1 ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(235px, auto));
+    grid-auto-flow: dense;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .container1 img {
+    width: 100%;
+    object-fit: cover;
+    height: 85%;
+    transition: all ease 0.4s;
+  }
+
+  img:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+  .column1 {
+    background-color: white;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+  }
+</style>

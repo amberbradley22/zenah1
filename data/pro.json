@@ -1,0 +1,84 @@
+[{
+  "id" : 1,
+ "image" : "../resources/product-beigedress.png",
+ "title" : "beige dress",
+ "description" : "Lorem",
+ "price" : "$0.99",
+ "bigimage" : "../resources/product-beigedress.png"
+},
+ 
+{
+  "id" : 2,
+  "image" : "../resources/product-bluedress.png",
+  "title" : "blue dress",
+  "description" : "Lorem",
+  "price" : "$2.99",
+  "bigimage" : "../resources/product-bluedress.png"
+},
+
+{
+  "id" : 3,
+  "image" : "../resources/product-blackset.png",
+  "title" : "black set",
+  "description" : "Lorem",
+  "price" : "$1.99",
+  "bigimage" : "../resources/product-blackset.png"
+},
+
+{
+  "id" : 4,
+  "image" : "../resources/product-ballerina.png",
+  "title" : "ballerina dress",
+  "description" : "Lorem",
+  "price" : "$1.99",
+  "bigimage" : "../resources/product-ballerina.png"
+},
+
+{
+  "id" : 5,
+  "image" : "../resources/product-image5.png",
+  "title" : "GREEN SKIRT",
+  "description" : "Lorem",
+  "price" : "$1.99",
+  "bigimage" : "../resources/product-image5.png"
+
+},
+
+{
+  "id" : 6,
+  "image" : "../resources/product-image5.png",
+  "title" : "GREEN SKIRT",
+  "description" : "Lorem",
+  "price" : "$1.99",
+  "bigimage" : "../resources/product-image5.png"
+
+},
+
+{
+  "id" : 3,
+  "image" : "../resources/product-blackset.png",
+  "title" : "GREEN SKIRT",
+  "description" : "Lorem",
+  "price" : "$1.99",
+  "bigimage" : "../resources/product-blackset.png"
+},
+
+{
+  "id" : 3,
+  "image" : "../resources/product-blackset.png",
+  "title" : "GREEN SKIRT",
+  "description" : "Lorem",
+  "price" : "$1.99",
+  "bigimage" : "../resources/product-blackset.png"
+},
+
+{
+  "id" : 3,
+  "image" : "../resources/product-ballerina.png",
+  "title" : "GREEN SKIRT",
+  "description" : "Lorem",
+  "price" : "$1.99",
+  "bigimage" : "../resources/product-ballerina.png"
+
+}
+]
